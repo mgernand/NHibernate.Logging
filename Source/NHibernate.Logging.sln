@@ -13,7 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		..\Build\Build.proj = ..\Build\Build.proj
 		License.txt = License.txt
-		..\Build\nhlogging.nuspec = ..\Build\nhlogging.nuspec
+		..\Build\nhlogging.commonlogging.nuspec = ..\Build\nhlogging.commonlogging.nuspec
+		..\Build\nhlogging.nlog.nuspec = ..\Build\nhlogging.nlog.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F3C36AA5-1ED0-453E-B00F-E4760978CD0B}"

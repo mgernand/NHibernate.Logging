@@ -16,6 +16,7 @@ namespace NHibernate.Logging.NLog
 	/// Implements the <see cref="IInternalLogger"/> interface to allow the usage 
 	/// of NLog 2.0 with the NHibernate logging infrastructure.
 	/// </summary>
+	/// Note: https://github.com/uhaciogullari/NLog.Interface
 	public class NLogLogger : IInternalLogger
 	{
 		private readonly Logger logger;
