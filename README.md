@@ -1,5 +1,7 @@
 NHibernate Logging Providers
 ============================
+The current version **1.3.2** is avialable as [NuGet package](http://nuget.org/packages/NHibernate.Logging/).
+Tis version is built against NHibernate 3.3.2 and Common.Logging 2.1.2.
 
 Project Description
 -------------------
