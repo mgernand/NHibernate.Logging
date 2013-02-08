@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Logging.CommonLogging", "NHibernate.Logging.CommonLogging\NHibernate.Logging.CommonLogging.csproj", "{A0AAC5DF-BE77-484A-8F85-EA3F6E0E6919}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging.Tests", "Logging.Tests\Logging.Tests.csproj", "{B4E2B869-E5E0-4B7F-99DE-BDB341607A95}"
