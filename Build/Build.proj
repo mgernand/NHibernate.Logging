@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Import Project="..\Tools\MSBuild\MSBuild.Community.Tasks.Targets"/>
+	
+	<PropertyGroup>
+		<!-- Version properties -->
+		<Version>1.3.1</Version>
+		<!-- Override path to custom build tasks -->
+		<MSBuildCommunityTasksPath>..\Tools\MSBuild</MSBuildCommunityTasksPath>
+		<MSBuildCommunityTasksLib>MSBuild.Community.Tasks.dll</MSBuildCommunityTasksLib>	
+		<!-- Path properties -->
+		<SourceFolder>..\Source</SourceFolder>
+		<OutputFolder>..\Output</OutputFolder>
+		<ReleaseFolder>..\Release</ReleaseFolder>
+		<NuGetBinFolder>..\Source\.nuget</NuGetBinFolder>
+		<!-- Solution properties -->
+		<SolutionName>NHibernate.Logging</SolutionName>
+	</PropertyGroup>
+
+	<!-- NuGet settings -->
+	<ItemGroup>
+		<NuSpecFiles Include="*.nuspec" />
+	</ItemGroup>
+
+	<Target Name="Build" DependsOnTargets="Clean;Setup">
+		<MSBuild BuildInParallel="true"
+				 Projects="$(SourceFolder)\$(SolutionName).sln"
+				 Targets="Rebuild"
+				 Properties="Configuration=Release;OutputPath=..\$(OutputFolder)">
+		</MSBuild>
+	</Target>
+
+	<Target Name="Release">
+		<Copy SourceFiles="@(NuSpecFiles)" DestinationFolder="$(OutputFolder)" />
+	
+		<!-- Insert the version number into the nuspec files and create nuget packages -->
+		<ItemGroup>
+			<NuSpecVersionedFiles Include="$(OutputFolder)\*.nuspec" />
+		</ItemGroup>
+		<NuGetPack ToolPath="$(NuGetBinFolder)"
+				   WorkingDirectory="$(OutputFolder)"
+				   File="%(NuSpecVersionedFiles.FullPath)"
+				   Version="$(Version)"
+				   OutputDirectory="$(ReleaseFolder)"/>		   
+	</Target>
+
+	<Target Name="Clean">
+		<RemoveDir Directories="$(OutputFolder)" />
+	</Target>
+	
+	<Target Name="Setup">
+		<MakeDir Directories="$(OutputFolder)" />
+		<MakeDir Directories="$(ReleaseFolder)" />
+	</Target>
+</Project>
