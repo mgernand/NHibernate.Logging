@@ -1,4 +1,4 @@
-﻿namespace Logging.Tests
+﻿namespace Logging.Tests.CommonLogging
 {
 	using System;
 	using Common.Logging;
@@ -80,17 +80,17 @@
 		#region Debug
 		public void Debug(object message)
 		{
-			debug++;
+			this.debug++;
 		}
 
 		public void Debug(object message, Exception exception)
 		{
-			debugException++;
+			this.debugException++;
 		}
 
 		public void DebugFormat(string format, params object[] args)
 		{
-			debugFormat++;
+			this.debugFormat++;
 		}
 
 		public void DebugFormat(string format, Exception exception, params object[] args)
@@ -132,17 +132,17 @@
 		#region Info
 		public void Info(object message)
 		{
-			info++;
+			this.info++;
 		}
 
 		public void Info(object message, Exception exception)
 		{
-			infoException++;
+			this.infoException++;
 		}
 
 		public void InfoFormat(string format, params object[] args)
 		{
-			infoFormat++;
+			this.infoFormat++;
 		}
 
 		public void InfoFormat(string format, Exception exception, params object[] args)
@@ -184,17 +184,17 @@
 		#region Warn
 		public void Warn(object message)
 		{
-			warn++;
+			this.warn++;
 		}
 
 		public void Warn(object message, Exception exception)
 		{
-			warnException++;
+			this.warnException++;
 		}
 
 		public void WarnFormat(string format, params object[] args)
 		{
-			warnFormat++;
+			this.warnFormat++;
 		}
 
 		public void WarnFormat(string format, Exception exception, params object[] args)
@@ -236,17 +236,17 @@
 		#region Error
 		public void Error(object message)
 		{
-			error++;
+			this.error++;
 		}
 
 		public void Error(object message, Exception exception)
 		{
-			errorException++;
+			this.errorException++;
 		}
 
 		public void ErrorFormat(string format, params object[] args)
 		{
-			errorFormat++;
+			this.errorFormat++;
 		}
 
 		public void ErrorFormat(string format, Exception exception, params object[] args)
@@ -288,12 +288,12 @@
 		#region Fatal
 		public void Fatal(object message)
 		{
-			fatal++;
+			this.fatal++;
 		}
 
 		public void Fatal(object message, Exception exception)
 		{
-			fatalException++;
+			this.fatalException++;
 		}
 
 		public void FatalFormat(string format, params object[] args)
@@ -346,7 +346,7 @@
 		{
 			get
 			{
-				isDebugEnabled++;
+				this.isDebugEnabled++;
 				return false;
 			}
 		}
@@ -355,7 +355,7 @@
 		{
 			get
 			{
-				isInfoEnabled++;
+				this.isInfoEnabled++;
 				return false;
 			}
 		}
@@ -364,7 +364,7 @@
 		{
 			get
 			{
-				isWarnEnabled++;
+				this.isWarnEnabled++;
 				return false;
 			}
 		}
@@ -373,7 +373,7 @@
 		{
 			get
 			{
-				isErrorEnabled++;
+				this.isErrorEnabled++;
 				return false;
 			}
 		}
@@ -382,7 +382,7 @@
 		{
 			get
 			{
-				isFatalEnabled++;
+				this.isFatalEnabled++;
 				return false;
 			}
 		}

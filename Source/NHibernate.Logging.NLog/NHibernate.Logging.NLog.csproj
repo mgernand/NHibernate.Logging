@@ -52,6 +52,7 @@
     <Compile Include="NLogLogger.cs" />
     <Compile Include="NLogLoggerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\nhlogging.snk">

@@ -1,4 +1,4 @@
-﻿namespace Logging.Tests
+﻿namespace Logging.Tests.CommonLogging
 {
 	using NHibernate.Logging.CommonLogging;
 	using NUnit.Framework;

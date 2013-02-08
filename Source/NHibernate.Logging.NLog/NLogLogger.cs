@@ -32,7 +32,7 @@ namespace NHibernate.Logging.NLog
 
 		public void Error(object message, Exception exception)
 		{
-			this.logger.ErrorException(message.ToString(), exception);
+			this.logger.ErrorException(message.ToStringSafe(), exception);
 		}
 
 		public void ErrorFormat(string format, params object[] args)
@@ -47,7 +47,7 @@ namespace NHibernate.Logging.NLog
 
 		public void Fatal(object message, Exception exception)
 		{
-			this.logger.FatalException(message.ToString(), exception);
+			this.logger.FatalException(message.ToStringSafe(), exception);
 		}
 
 		// Note: No FatalFormat() in ILogger-Interface available.
@@ -63,7 +63,7 @@ namespace NHibernate.Logging.NLog
 
 		public void Debug(object message, Exception exception)
 		{
-			this.logger.DebugException(message.ToString(), exception);
+			this.logger.DebugException(message.ToStringSafe(), exception);
 		}
 
 		public void DebugFormat(string format, params object[] args)
@@ -78,7 +78,7 @@ namespace NHibernate.Logging.NLog
 
 		public void Info(object message, Exception exception)
 		{
-			this.logger.InfoException(message.ToString(), exception);
+			this.logger.InfoException(message.ToStringSafe(), exception);
 		}
 
 		public void InfoFormat(string format, params object[] args)
@@ -93,7 +93,7 @@ namespace NHibernate.Logging.NLog
 
 		public void Warn(object message, Exception exception)
 		{
-			this.logger.WarnException(message.ToString(), exception);
+			this.logger.WarnException(message.ToStringSafe(), exception);
 		}
 
 		public void WarnFormat(string format, params object[] args)

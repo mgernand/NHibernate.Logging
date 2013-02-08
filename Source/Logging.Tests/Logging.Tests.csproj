@@ -44,6 +44,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NHibernate.3.3.2.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.0.0.2000\lib\net35\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
@@ -58,8 +61,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonLoggingLoggerTest.cs" />
-    <Compile Include="CommonLogMock.cs" />
+    <Compile Include="CommonLogging\CommonLoggingLoggerTest.cs" />
+    <Compile Include="CommonLogging\CommonLogMock.cs" />
+    <Compile Include="NLog\NLogLoggerTest.cs" />
+    <Compile Include="NLog\NLogLogMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,10 +72,15 @@
       <Project>{A0AAC5DF-BE77-484A-8F85-EA3F6E0E6919}</Project>
       <Name>NHibernate.Logging.CommonLogging</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NHibernate.Logging.NLog\NHibernate.Logging.NLog.csproj">
+      <Project>{516d1cb1-5594-483f-8542-fe42ffeee1b0}</Project>
+      <Name>NHibernate.Logging.NLog</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
