@@ -29,7 +29,7 @@ The following logging frameworks are supported by Common.Logging 2.1.1:
 * Enterprise Library 4.1 Logging
 * Enterprise Library 5.0 Logging
 
-Review the NHibernate Wiki for additional informations. Please leave a comment if you 
+Review the [NHibernate Wiki](http://nhforge.org/wikis/howtonh/using-nlog-via-common-logging-with-nhibernate.aspx) for additional informations. Please leave a comment if you 
 like it or not. ;-)
 
 NuGet available
