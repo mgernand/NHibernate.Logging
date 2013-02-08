@@ -5,11 +5,11 @@
 		<version>0.0.0</version>
 		<authors>Matthias Gernand</authors>
 		<owners>Matthias Gernand</owners>
-		<licenseUrl>http://nhlogging.codeplex.com/license</licenseUrl>
-		<projectUrl>http://nhlogging.codeplex.com/</projectUrl>
+		<licenseUrl>https://github.com/mgernand/nhibernate-logging/Source/License.txt</licenseUrl>
+		<projectUrl>https://github.com/mgernand/nhibernate-logging</projectUrl>
 		<dependencies>
-			<dependency id="Common.Logging" version="2.1.1" />
-			<dependency id="NHibernate" version="3.3.1.4000" />
+			<dependency id="Common.Logging" version="2.1.2" />
+			<dependency id="NHibernate" version="3.3.2.4000" />
 		</dependencies>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
 		<description>Provides an interface between NHibernate and Common.Logging.
