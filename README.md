@@ -5,18 +5,18 @@ Project Description
 -------------------
 NHibernate Logging Providers makes it possible to use your favourite logger with NHibernate. 
 You no longer have to use log4net. The new NHibernate (since NH3) logging abstraction makes 
-this possible. The providers are developed in C# using .Net 3.5.
+this possible. The providers are developed in C# using .NET 3.5.
 
 Available Logging Providers
 ---------------------------
 The current release contains log providers for the following logging frameworks.
 
-* [Common.Logging 2.1.1](http://netcommon.sourceforge.net/)
+* [Common.Logging 2.1.2](http://netcommon.sourceforge.net/)
 
-Common.Logging 2.1.1 supports several other logging frameworks. So you can use
+Common.Logging 2.1.2 supports several other logging frameworks. So you can use
 each of them with NHibernate via Common.Logging 2.1.1 abstraction.
 
-The following logging frameworks are supported by Common.Logging 2.1.1:
+The following logging frameworks are supported by Common.Logging 2.1.2:
 
 * System.Console
 * System.Diagnostics.Trace
