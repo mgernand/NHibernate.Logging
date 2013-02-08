@@ -20,6 +20,5 @@
 		<file src="App.config.transform" target="content\App.config.transform" />
 		<file src="NHibernate.Logging.NLog.dll" target="lib\net35\NHibernate.Logging.NLog.dll" />
 		<file src="NHibernate.Logging.NLog.pdb" target="lib\net35\NHibernate.Logging.NLog.pdb" />
-		<file src="NHibernate.Logging.NLog.xml" target="lib\net35\NHibernate.Logging.NLog.xml" />
 	</files>
 </package>
