@@ -1,27 +1,25 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
-		<id>NHibernate.Logging</id>
+		<id>NHibernate.Logging.NLog</id>
 		<version>0.0.0</version>
 		<authors>Matthias Gernand</authors>
 		<owners>Matthias Gernand</owners>
 		<licenseUrl>https://github.com/mgernand/nhibernate-logging/blob/master/Source/License.txt</licenseUrl>
 		<projectUrl>https://github.com/mgernand/nhibernate-logging</projectUrl>
 		<dependencies>
-			<dependency id="Common.Logging" version="2.1.2" />
+			<dependency id="NLog" version="2.0.0.2000" />
 			<dependency id="NHibernate" version="3.3.2.4000" />
 		</dependencies>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
-		<description>Provides an interface between NHibernate and Common.Logging.
-
-		Thanks to Matthew Ferreira for creating the nuget package in the first place.</description>
+		<description>Provides an interface between NHibernate and NLog.</description>
 		<language>en-US</language>
 		<tags>ORM, Logger</tags>
 	</metadata>
 	<files>
 		<file src="App.config.transform" target="content\App.config.transform" />
-		<file src="NHibernate.Logging.CommonLogging.dll" target="lib\net35\NHibernate.Logging.CommonLogging.dll" />
-		<file src="NHibernate.Logging.CommonLogging.pdb" target="lib\net35\NHibernate.Logging.CommonLogging.pdb" />
-		<file src="NHibernate.Logging.CommonLogging.xml" target="lib\net35\NHibernate.Logging.CommonLogging.xml" />
+		<file src="NHibernate.Logging.NLog.dll" target="lib\net35\NHibernate.Logging.NLog.dll" />
+		<file src="NHibernate.Logging.NLog.pdb" target="lib\net35\NHibernate.Logging.NLog.pdb" />
+		<file src="NHibernate.Logging.NLog.xml" target="lib\net35\NHibernate.Logging.NLog.xml" />
 	</files>
 </package>
