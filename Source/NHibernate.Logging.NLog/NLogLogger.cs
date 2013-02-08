@@ -7,20 +7,20 @@
  * 
  * Please keep this header intact if you use this code.
  */
-namespace NHibernate.Logging.CommonLogging
+namespace NHibernate.Logging.NLog
 {
 	using System;
-	using Common.Logging;
+	using global::NLog;
 
 	/// <summary>
 	/// Implements the <see cref="IInternalLogger"/> interface to allow the usage 
-	/// of Common.Logging 2.1 with the NHibernate logging infrastructure.
+	/// of NLog 2.0 with the NHibernate logging infrastructure.
 	/// </summary>
-	public class CommonLoggingLogger : IInternalLogger
+	public class NLogLogger : IInternalLogger
 	{
-		private readonly ILog logger;
+		private readonly Logger logger;
 
-		public CommonLoggingLogger(ILog logger)
+		public NLogLogger(Logger logger)
 		{
 			this.logger = logger;
 		}
@@ -32,12 +32,12 @@ namespace NHibernate.Logging.CommonLogging
 
 		public void Error(object message, Exception exception)
 		{
-			this.logger.Error(message, exception);
+			this.logger.ErrorException(message.ToString(), exception);
 		}
 
 		public void ErrorFormat(string format, params object[] args)
 		{
-			this.logger.ErrorFormat(format, args);
+			this.logger.Error(format, args);
 		}
 
 		public void Fatal(object message)
@@ -47,7 +47,7 @@ namespace NHibernate.Logging.CommonLogging
 
 		public void Fatal(object message, Exception exception)
 		{
-			this.logger.Fatal(message, exception);
+			this.logger.FatalException(message.ToString(), exception);
 		}
 
 		// Note: No FatalFormat() in ILogger-Interface available.
@@ -63,12 +63,12 @@ namespace NHibernate.Logging.CommonLogging
 
 		public void Debug(object message, Exception exception)
 		{
-			this.logger.Debug(message, exception);
+			this.logger.DebugException(message.ToString(), exception);
 		}
 
 		public void DebugFormat(string format, params object[] args)
 		{
-			this.logger.DebugFormat(format, args);
+			this.logger.Debug(format, args);
 		}
 
 		public void Info(object message)
@@ -78,12 +78,12 @@ namespace NHibernate.Logging.CommonLogging
 
 		public void Info(object message, Exception exception)
 		{
-			this.logger.Info(message, exception);
+			this.logger.InfoException(message.ToString(), exception);
 		}
 
 		public void InfoFormat(string format, params object[] args)
 		{
-			this.logger.InfoFormat(format, args);
+			this.logger.Info(format, args);
 		}
 
 		public void Warn(object message)
@@ -93,12 +93,12 @@ namespace NHibernate.Logging.CommonLogging
 
 		public void Warn(object message, Exception exception)
 		{
-			this.logger.Warn(message, exception);
+			this.logger.WarnException(message.ToString(), exception);
 		}
 
 		public void WarnFormat(string format, params object[] args)
 		{
-			this.logger.WarnFormat(format, args);
+			this.logger.Warn(format, args);
 		}
 
 		public bool IsErrorEnabled
