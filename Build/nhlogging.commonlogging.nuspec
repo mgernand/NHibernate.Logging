@@ -9,7 +9,7 @@
 		<projectUrl>https://github.com/mgernand/nhibernate-logging</projectUrl>
 		<dependencies>
 			<dependency id="Common.Logging" version="2.1.2" />
-			<dependency id="NHibernate" version="3.3.2.4000" />
+			<dependency id="NHibernate" version="3.3.3.4000" />
 		</dependencies>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
 		<description>Provides an interface between NHibernate and Common.Logging.
