@@ -55,6 +55,6 @@ following lines to your Web.config or App.config:
 ```xml
 <appSettings>
   <add key="nhibernate-logger" 
-       value="NHibernate.Logging.CommonLogging.CommonLoggingLoggerFactory,  Hibernate.Logging.CommonLogging"/>
+       value="NHibernate.Logging.CommonLogging.CommonLoggingLoggerFactory, NHibernate.Logging.CommonLogging"/>
 </appSettings>
 ```
