@@ -5,7 +5,7 @@
 		<version>0.0.0</version>
 		<authors>Matthias Gernand</authors>
 		<owners>Matthias Gernand</owners>
-		<licenseUrl>https://github.com/mgernand/nhibernate-logging/blob/master/Source/License.txt</licenseUrl>
+		<licenseUrl>https://github.com/mgernand/nhibernate-logging/blob/master/LICENSE</licenseUrl>
 		<projectUrl>https://github.com/mgernand/nhibernate-logging</projectUrl>
 		<dependencies>
 			<dependency id="NLog" version="2.0.0.2000" />
