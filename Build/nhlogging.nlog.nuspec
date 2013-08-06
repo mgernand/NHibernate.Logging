@@ -12,7 +12,7 @@
 			<dependency id="NHibernate" version="3.3.2.4000" />
 		</dependencies>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
-		<description>Provides an interface between NHibernate and NLog.</description>
+		<description>Connects NHibernate logging infrastructure to NLog.</description>
 		<language>en-US</language>
 		<tags>ORM, Logger</tags>
 	</metadata>

@@ -12,9 +12,8 @@
 			<dependency id="NHibernate" version="3.3.3.4000" />
 		</dependencies>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
-		<description>Provides an interface between NHibernate and Common.Logging.
-
-		Thanks to Matthew Ferreira for creating the nuget package in the first place.</description>
+		<description>Connects NHibernate logging infrastructure to Common.Logging.</description>
+		<summary>Thanks to Matthew Ferreira for creating the nuget package in the first place.</summary>
 		<language>en-US</language>
 		<tags>ORM, Logger</tags>
 	</metadata>
