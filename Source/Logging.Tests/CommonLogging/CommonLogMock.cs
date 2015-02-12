@@ -2,8 +2,9 @@
 {
 	using System;
 	using Common.Logging;
+	using Common.Logging.Simple;
 
-	internal class CommonLogMock : ILog
+    internal class CommonLogMock : ILog
 	{
 		public int debug;
 		public int debugException;
@@ -369,7 +370,17 @@
 			}
 		}
 
-		public bool IsErrorEnabled
+        public IVariablesContext GlobalVariablesContext
+        {
+            get { return new NoOpVariablesContext(); }
+        }
+
+        public IVariablesContext ThreadVariablesContext
+        {
+            get { return new NoOpVariablesContext(); }
+        }
+
+        public bool IsErrorEnabled
 		{
 			get
 			{
