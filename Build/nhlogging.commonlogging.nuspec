@@ -8,8 +8,8 @@
 		<licenseUrl>https://github.com/mgernand/nhibernate-logging/blob/master/LICENSE</licenseUrl>
 		<projectUrl>https://github.com/mgernand/nhibernate-logging</projectUrl>
 		<dependencies>
-			<dependency id="Common.Logging" version="2.1.2" />
-			<dependency id="NHibernate" version="3.3.3.4000" />
+			<dependency id="Common.Logging" version="3.1.0" />
+			<dependency id="NHibernate" version="4.0.3.4000" />
 		</dependencies>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
 		<description>Connects NHibernate logging infrastructure to Common.Logging.</description>
@@ -19,7 +19,7 @@
 	</metadata>
 	<files>
 		<file src="App.config.transform" target="content\App.config.transform" />
-		<file src="NHibernate.Logging.CommonLogging.dll" target="lib\net35\NHibernate.Logging.CommonLogging.dll" />
-		<file src="NHibernate.Logging.CommonLogging.pdb" target="lib\net35\NHibernate.Logging.CommonLogging.pdb" />
+		<file src="NHibernate.Logging.CommonLogging.dll" target="lib\net45\NHibernate.Logging.CommonLogging.dll" />
+		<file src="NHibernate.Logging.CommonLogging.pdb" target="lib\net45\NHibernate.Logging.CommonLogging.pdb" />
 	</files>
 </package>
