@@ -18,7 +18,7 @@ The current release contains log providers for the following logging frameworks.
 Common.Logging 3.1.0 supports several other logging frameworks. So you can use
 each of them with NHibernate via Common.Logging 3.1.0 abstraction.
 
-Review the [NHibernate Wiki](http://nhforge.org/wikis/howtonh/using-nlog-via-common-logging-with-nhibernate.aspx) for additional informations. Please leave a comment if you 
+Review the [NHibernate Wiki](http://nhibernate.info/doc/howto/various/using-nlog-via-common-logging-with-nhibernate.html) for additional informations. Please leave a comment if you 
 like it or not. ;-)
 
 NuGet available
