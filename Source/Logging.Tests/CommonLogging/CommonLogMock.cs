@@ -19,6 +19,7 @@
 		public int errorFormat;
 		public int fatal;
 		public int fatalException;
+		public int isTraceEnabled;
 		public int isDebugEnabled;
 		public int isInfoEnabled;
 		public int isWarnEnabled;
@@ -339,7 +340,11 @@
 
 		public bool IsTraceEnabled
 		{
-			get { throw new NotImplementedException(); }
+			get
+			{
+				this.isTraceEnabled++;
+				return false;
+			}
 		}
 
 		public bool IsDebugEnabled
@@ -369,9 +374,6 @@
 			}
 		}
 
-		public IVariablesContext GlobalVariablesContext { get; private set; }
-		public IVariablesContext ThreadVariablesContext { get; private set; }
-
 		public bool IsErrorEnabled
 		{
 			get
@@ -389,5 +391,12 @@
 				return false;
 			}
 		}
+
+		public IVariablesContext GlobalVariablesContext { get; private set; }
+
+		public IVariablesContext ThreadVariablesContext { get; private set; }
+
+		/// <inheritdoc />
+		public INestedVariablesContext NestedThreadVariablesContext { get; }
 	}
 }

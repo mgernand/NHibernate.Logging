@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Logging.CommonLogging", "NHibernate.Logging.CommonLogging\NHibernate.Logging.CommonLogging.csproj", "{A0AAC5DF-BE77-484A-8F85-EA3F6E0E6919}"
 EndProject
@@ -11,11 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingExample", "LoggingEx
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{72BEE0B0-6269-4950-90D0-88D5C13713BB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{95942B4D-ABA8-4122-966C-B34814561F45}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{95942B4D-ABA8-4122-966C-B34814561F45}"
 	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
 		..\Build\Build.proj = ..\Build\Build.proj
-		License.txt = License.txt
+		..\LICENSE = ..\LICENSE
 		..\Build\nhlogging.commonlogging.nuspec = ..\Build\nhlogging.commonlogging.nuspec
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F3C36AA5-1ED0-453E-B00F-E4760978CD0B}"
@@ -53,5 +55,8 @@ Global
 		{B4E2B869-E5E0-4B7F-99DE-BDB341607A95} = {F3C36AA5-1ED0-453E-B00F-E4760978CD0B}
 		{0822F337-8F08-4462-97E4-996D67D2060F} = {730CB631-E0FC-4447-AEE1-4E92D5807DA7}
 		{72BEE0B0-6269-4950-90D0-88D5C13713BB} = {730CB631-E0FC-4447-AEE1-4E92D5807DA7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F93D9F47-9501-4CE1-9E8D-DCC1F2D55157}
 	EndGlobalSection
 EndGlobal

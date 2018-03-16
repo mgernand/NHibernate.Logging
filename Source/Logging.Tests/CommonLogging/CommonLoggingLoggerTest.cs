@@ -51,6 +51,7 @@
 			logMock.errorFormat.Should().Be(1);
 			logMock.fatal.Should().Be(1);
 			logMock.fatalException.Should().Be(1);
+			logMock.isTraceEnabled.Should().Be(1);
 			logMock.isDebugEnabled.Should().Be(1);
 			logMock.isInfoEnabled.Should().Be(1);
 			logMock.isWarnEnabled.Should().Be(1);
