@@ -1,27 +1,10 @@
-﻿namespace NHibernate.Logging.UnitTests
+﻿namespace NHibernate.Logging.UnitTests.CommonLogging
 {
 	using System;
 	using Common.Logging;
 
 	internal class CommonLogMock : ILog
 	{
-		public int trace;
-		public int traceException;
-		public int traceFormat;
-		public int debug;
-		public int debugException;
-		public int debugFormat;
-		public int info;
-		public int infoException;
-		public int infoFormat;
-		public int warn;
-		public int warnException;
-		public int warnFormat;
-		public int error;
-		public int errorException;
-		public int errorFormat;
-		public int fatal;
-		public int fatalException;
 		public int isTraceEnabled;
 		public int isDebugEnabled;
 		public int isInfoEnabled;
@@ -84,17 +67,17 @@
 		#region Debug
 		public void Debug(object message)
 		{
-			this.debug++;
+			throw new NotImplementedException();
 		}
 
 		public void Debug(object message, Exception exception)
 		{
-			this.debugException++;
+			throw new NotImplementedException();
 		}
 
 		public void DebugFormat(string format, params object[] args)
 		{
-			this.debugFormat++;
+			throw new NotImplementedException();
 		}
 
 		public void DebugFormat(string format, Exception exception, params object[] args)
@@ -136,17 +119,17 @@
 		#region Info
 		public void Info(object message)
 		{
-			this.info++;
+			throw new NotImplementedException();
 		}
 
 		public void Info(object message, Exception exception)
 		{
-			this.infoException++;
+			throw new NotImplementedException();
 		}
 
 		public void InfoFormat(string format, params object[] args)
 		{
-			this.infoFormat++;
+			throw new NotImplementedException();
 		}
 
 		public void InfoFormat(string format, Exception exception, params object[] args)
@@ -188,17 +171,17 @@
 		#region Warn
 		public void Warn(object message)
 		{
-			this.warn++;
+			throw new NotImplementedException();
 		}
 
 		public void Warn(object message, Exception exception)
 		{
-			this.warnException++;
+			throw new NotImplementedException();
 		}
 
 		public void WarnFormat(string format, params object[] args)
 		{
-			this.warnFormat++;
+			throw new NotImplementedException();
 		}
 
 		public void WarnFormat(string format, Exception exception, params object[] args)
@@ -240,17 +223,17 @@
 		#region Error
 		public void Error(object message)
 		{
-			this.error++;
+			throw new NotImplementedException();
 		}
 
 		public void Error(object message, Exception exception)
 		{
-			this.errorException++;
+			throw new NotImplementedException();
 		}
 
 		public void ErrorFormat(string format, params object[] args)
 		{
-			this.errorFormat++;
+			throw new NotImplementedException();
 		}
 
 		public void ErrorFormat(string format, Exception exception, params object[] args)
@@ -292,12 +275,12 @@
 		#region Fatal
 		public void Fatal(object message)
 		{
-			this.fatal++;
+			throw new NotImplementedException();
 		}
 
 		public void Fatal(object message, Exception exception)
 		{
-			this.fatalException++;
+			throw new NotImplementedException();
 		}
 
 		public void FatalFormat(string format, params object[] args)

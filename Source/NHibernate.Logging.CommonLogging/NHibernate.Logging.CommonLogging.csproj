@@ -22,14 +22,18 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Common.Logging" Version="3.4.1" />
-	  <PackageReference Include="NHibernate" Version="5.3.10" />
+	  <None Remove="App.config.transform" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="App.config.transform">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
+	  <Content Include="App.config.transform">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Common.Logging" Version="3.4.1" />
+	  <PackageReference Include="NHibernate" Version="5.3.10" />
 	</ItemGroup>
 
 </Project>
