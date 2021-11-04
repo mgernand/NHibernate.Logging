@@ -1,4 +1,4 @@
-﻿namespace LoggingExample
+﻿namespace NHibernate.Logging.CommonLogging.Demo
 {
 	using System;
 	using System.Collections.Generic;

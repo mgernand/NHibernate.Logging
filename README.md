@@ -7,7 +7,7 @@ Project Description
 -------------------
 NHibernate Logging Providers makes it possible to use your favourite logger with NHibernate. 
 You no longer have to use log4net. The new NHibernate (since NH3) logging abstraction makes 
-this possible. The provider is developed in C# for .NET 4.6.1.
+this possible. The provider is developed .NET Standard 2.0.
 
 Available Logging Providers
 ---------------------------

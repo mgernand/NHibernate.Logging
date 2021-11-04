@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="LoggingExample"	namespace="LoggingExample">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="NHibernate.Logging.CommonLogging.Demo"	namespace="NHibernate.Logging.CommonLogging.Demo">
 	<class name="Customer" table="Customers">
 		<id name="Id" column="Id" type="Int64">
 			<generator class="native"/>

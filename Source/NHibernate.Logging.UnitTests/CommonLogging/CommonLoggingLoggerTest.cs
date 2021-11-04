@@ -1,9 +1,9 @@
-﻿namespace Logging.Tests.CommonLogging
+﻿namespace NHibernate.Logging.UnitTests
 {
+	using FluentAssertions;
 	using NHibernate;
 	using NHibernate.Logging.CommonLogging;
 	using NUnit.Framework;
-	using SharpTestsEx;
 
 	[TestFixture]
 	public class CommonLoggingLoggerTest

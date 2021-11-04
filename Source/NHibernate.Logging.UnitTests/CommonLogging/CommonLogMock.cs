@@ -1,4 +1,4 @@
-﻿namespace Logging.Tests.CommonLogging
+﻿namespace NHibernate.Logging.UnitTests
 {
 	using System;
 	using Common.Logging;

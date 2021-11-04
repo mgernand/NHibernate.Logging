@@ -1,19 +1,11 @@
-﻿using System;
-using System.Reflection;
-using System.Runtime.InteropServices;
+﻿using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
 
 [assembly: AssemblyTitle("NHibernate.Logging.CommonLogging")]
-[assembly: AssemblyDescription("Common.Logging 3.1.x Logging Provider for NHibernate 4.0.x")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NHibernate.Logging.CommonLogging")]
-[assembly: AssemblyCopyright("Copyright © Matthias Gernand 2011-2015")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-
-[assembly: CLSCompliant(true)]
-[assembly: ComVisible(false)]
-[assembly: Guid("9793cd5f-e84f-4e24-b21c-32221b7913be")]
-[assembly: AssemblyVersion("4.0.3.4000")]
-[assembly: AssemblyFileVersion("4.0.3.4000")]
-[assembly: AssemblyInformationalVersion("4.0.3.4000")]
+[assembly: AssemblyDescription("Common.Logging logging provider for NHibernate.")]
+[assembly: NeutralResourcesLanguage("en")]
+[assembly: AssemblyCopyright("Copyright © 2013-2021 Matthias Gernand. All rights reserved.")]
+[assembly: AssemblyVersion("5.3.10")]
+[assembly: AssemblyFileVersion("5.3.10")]
+[assembly: InternalsVisibleTo("NHibernate.Logging.UnitTests")]
