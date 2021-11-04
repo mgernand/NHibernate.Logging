@@ -1,13 +1,13 @@
 NHibernate Logging Providers
 ============================
 The current version **5.3.10** is available as [NuGet package](http://nuget.org/packages/NHibernate.Logging/).
-This version is built against NHibernate 5.0.3 and Common.Logging 3.4.1.
+This version is built against NHibernate 5.3.10 and Common.Logging 3.4.1.
 
 Project Description
 -------------------
 NHibernate Logging Providers makes it possible to use your favourite logger with NHibernate. 
 You no longer have to use log4net. The new NHibernate (since NH3) logging abstraction makes 
-this possible. The provider is developed in C# using .NET 4.6.1.
+this possible. The provider is developed in C# for .NET 4.6.1.
 
 Available Logging Providers
 ---------------------------
@@ -30,7 +30,7 @@ Thanks again for the effort.
 Getting Started
 ---------------
 Add the [NuGet package](http://nuget.org/packages/NHibernate.Logging/) to your project. Install
-all nessessary Common.Logging packages for the Log ürovider you want to use.
+all nessessary Common.Logging packages for the logging provider you want to use.
 
 To enable the log provider you have to add the following lines to your Web.config or App.config:
 
