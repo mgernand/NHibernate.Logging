@@ -13,6 +13,7 @@
 		{
 			CommonLogMock logMock = new CommonLogMock();
 			CommonLoggingLogger logger = new CommonLoggingLogger(logMock);
+
 			logger.IsEnabled(NHibernateLogLevel.Trace);
 			logger.IsEnabled(NHibernateLogLevel.Debug);
 			logger.IsEnabled(NHibernateLogLevel.Info);
