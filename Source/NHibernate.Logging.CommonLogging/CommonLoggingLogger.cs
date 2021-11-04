@@ -1,22 +1,13 @@
-﻿/**
- * Licensed under the LGPL. See License.txt
- * The software is provided AS IS.
- * 
- * Copyright © Matthias Gernand 2010 - 2013
- * https://github.com/mgernand/nhibernate-logging
- * 
- * Please keep this header intact if you use this code.
- */
-namespace NHibernate.Logging.CommonLogging
+﻿namespace NHibernate.Logging.CommonLogging
 {
 	using System;
 	using Common.Logging;
 
 	/// <summary>
-	/// Implements the <see cref="IInternalLogger"/> interface to allow the usage 
-	/// of Common.Logging 2.1 with the NHibernate logging infrastructure.
+	/// Implements the <see cref="INHibernateLogger"/> interface to allow the usage 
+	/// of Common.Logging 3.4.1 with the NHibernate logging infrastructure.
 	/// </summary>
-	public class CommonLoggingLogger : IInternalLogger
+	public class CommonLoggingLogger : INHibernateLogger
 	{
 		private readonly ILog logger;
 
@@ -25,105 +16,52 @@ namespace NHibernate.Logging.CommonLogging
 			this.logger = logger;
 		}
 
-		public void Error(object message)
+		public bool IsEnabled(NHibernateLogLevel logLevel)
 		{
-			this.logger.Error(message);
+			switch (logLevel)
+			{
+				case NHibernateLogLevel.Trace:
+					return this.logger.IsTraceEnabled;
+				case NHibernateLogLevel.Debug:
+					return this.logger.IsDebugEnabled;
+				case NHibernateLogLevel.Info:
+					return this.logger.IsInfoEnabled;
+				case NHibernateLogLevel.Warn:
+					return this.logger.IsWarnEnabled;
+				case NHibernateLogLevel.Error:
+					return this.logger.IsErrorEnabled;
+				case NHibernateLogLevel.Fatal:
+					return this.logger.IsFatalEnabled;
+				case NHibernateLogLevel.None:
+					return true;
+				default:
+					return false;
+			}
 		}
 
-		public void Error(object message, Exception exception)
+		public void Log(NHibernateLogLevel logLevel, NHibernateLogValues state, Exception exception)
 		{
-			this.logger.Error(message, exception);
-		}
-
-		public void ErrorFormat(string format, params object[] args)
-		{
-			this.logger.ErrorFormat(format, args);
-		}
-
-		public void Fatal(object message)
-		{
-			this.logger.Fatal(message);
-		}
-
-		public void Fatal(object message, Exception exception)
-		{
-			this.logger.Fatal(message, exception);
-		}
-
-		// Note: No FatalFormat() in ILogger-Interface available.
-		/*public void FatalFormat(string format, params object[] args)
-		{
-			this.logger.FatalFormat(format, args);
-		}*/
-
-		public void Debug(object message)
-		{
-			this.logger.Debug(message);
-		}
-
-		public void Debug(object message, Exception exception)
-		{
-			this.logger.Debug(message, exception);
-		}
-
-		public void DebugFormat(string format, params object[] args)
-		{
-			this.logger.DebugFormat(format, args);
-		}
-
-		public void Info(object message)
-		{
-			this.logger.Info(message);
-		}
-
-		public void Info(object message, Exception exception)
-		{
-			this.logger.Info(message, exception);
-		}
-
-		public void InfoFormat(string format, params object[] args)
-		{
-			this.logger.InfoFormat(format, args);
-		}
-
-		public void Warn(object message)
-		{
-			this.logger.Warn(message);
-		}
-
-		public void Warn(object message, Exception exception)
-		{
-			this.logger.Warn(message, exception);
-		}
-
-		public void WarnFormat(string format, params object[] args)
-		{
-			this.logger.WarnFormat(format, args);
-		}
-
-		public bool IsErrorEnabled
-		{
-			get { return this.logger.IsErrorEnabled; }
-		}
-
-		public bool IsFatalEnabled
-		{
-			get { return this.logger.IsFatalEnabled; }
-		}
-
-		public bool IsDebugEnabled
-		{
-			get { return this.logger.IsDebugEnabled; }
-		}
-
-		public bool IsInfoEnabled
-		{
-			get { return this.logger.IsInfoEnabled; }
-		}
-
-		public bool IsWarnEnabled
-		{
-			get { return this.logger.IsWarnEnabled; }
+			switch (logLevel)
+			{
+				case NHibernateLogLevel.Trace:
+					this.logger.TraceFormat(state.Format, exception, state.Args);
+					break;
+				case NHibernateLogLevel.Debug:
+					this.logger.DebugFormat(state.Format, exception, state.Args);
+					break;
+				case NHibernateLogLevel.Info:
+					this.logger.InfoFormat(state.Format, exception, state.Args);
+					break;
+				case NHibernateLogLevel.Warn:
+					this.logger.WarnFormat(state.Format, exception, state.Args);
+					break;
+				case NHibernateLogLevel.Error:
+					this.logger.ErrorFormat(state.Format, exception, state.Args);
+					break;
+				case NHibernateLogLevel.Fatal:
+					this.logger.FatalFormat(state.Format, exception, state.Args);
+					break;
+			}
 		}
 	}
 }

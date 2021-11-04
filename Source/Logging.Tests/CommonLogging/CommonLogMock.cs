@@ -5,6 +5,9 @@
 
 	internal class CommonLogMock : ILog
 	{
+		public int trace;
+		public int traceException;
+		public int traceFormat;
 		public int debug;
 		public int debugException;
 		public int debugFormat;

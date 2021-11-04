@@ -2,8 +2,8 @@
 {
 	using System;
 	using System.Collections.Generic;
-	using System.Collections.Specialized;
 	using Common.Logging;
+	using Common.Logging.Configuration;
 	using Common.Logging.NLog;
 	using NHibernate;
 	using NHibernate.Cfg;
@@ -38,6 +38,8 @@
 				Console.WriteLine(customer);
 			}
 
+			Console.WriteLine();
+			Console.WriteLine("Press any key to quit...");
 			Console.ReadKey();
 		}
 	}

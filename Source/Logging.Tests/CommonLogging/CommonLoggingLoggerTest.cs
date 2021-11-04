@@ -1,5 +1,6 @@
 ﻿namespace Logging.Tests.CommonLogging
 {
+	using NHibernate;
 	using NHibernate.Logging.CommonLogging;
 	using NUnit.Framework;
 	using SharpTestsEx;
@@ -12,31 +13,23 @@
 		{
 			CommonLogMock logMock = new CommonLogMock();
 			CommonLoggingLogger logger = new CommonLoggingLogger(logMock);
-			bool b = logger.IsDebugEnabled;
-			b = logger.IsErrorEnabled;
-			b = logger.IsFatalEnabled;
-			b = logger.IsInfoEnabled;
-			b = logger.IsWarnEnabled;
+			logger.IsEnabled(NHibernateLogLevel.Trace);
+			logger.IsEnabled(NHibernateLogLevel.Debug);
+			logger.IsEnabled(NHibernateLogLevel.Info);
+			logger.IsEnabled(NHibernateLogLevel.Warn);
+			logger.IsEnabled(NHibernateLogLevel.Error);
+			logger.IsEnabled(NHibernateLogLevel.Fatal);
 
-			logger.Debug(null);
-			logger.Debug(null, null);
-			logger.DebugFormat(null, null);
+			logger.Log(NHibernateLogLevel.Trace, default, null);
+			logger.Log(NHibernateLogLevel.Debug, default, null);
+			logger.Log(NHibernateLogLevel.Info, default, null);
+			logger.Log(NHibernateLogLevel.Warn, default, null);
+			logger.Log(NHibernateLogLevel.Error, default, null);
+			logger.Log(NHibernateLogLevel.Fatal, default, null);
 
-			logger.Error(null);
-			logger.Error(null, null);
-			logger.ErrorFormat(null, null);
-
-			logger.Warn(null);
-			logger.Warn(null, null);
-			logger.WarnFormat(null, null);
-
-			logger.Info(null);
-			logger.Info(null, null);
-			logger.InfoFormat(null, null);
-
-			logger.Fatal(null);
-			logger.Fatal(null, null);
-
+			logMock.trace.Should().Be(1);
+			logMock.traceException.Should().Be(1);
+			logMock.traceFormat.Should().Be(1);
 			logMock.debug.Should().Be(1);
 			logMock.debugException.Should().Be(1);
 			logMock.debugFormat.Should().Be(1);
