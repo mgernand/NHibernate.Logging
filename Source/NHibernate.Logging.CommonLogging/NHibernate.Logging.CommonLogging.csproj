@@ -19,16 +19,21 @@
 		<RepositoryUrl>https://github.com/mgernand/NHibernate.Logging</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>orm, logger, nhibernate</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <None Remove="App.config.transform" />
-	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="App.config.transform">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 	<ItemGroup>
