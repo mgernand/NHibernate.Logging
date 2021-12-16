@@ -11,6 +11,8 @@
 		<IncludeSymbols>false</IncludeSymbols>
 		<Copyright>Copyright © 2013-2021 Matthias Gernand. All rights reserved.</Copyright>
 		<Version>5.3.10</Version>
+		<AssemblyVersion>5.3.10</AssemblyVersion>
+		<FileVersion>5.3.10</FileVersion>
 		<Authors>Matthias Gernand</Authors>
 		<Description>Common.Logging logging provider for NHibernate.</Description>
 		<NeutralLanguage>en</NeutralLanguage>
@@ -21,6 +23,7 @@
 		<PackageTags>orm, logger, nhibernate</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>icon.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -30,6 +33,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Include="..\..\..\Extensions.Logging.Mock\icon.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	  <None Include="..\..\README.md">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
