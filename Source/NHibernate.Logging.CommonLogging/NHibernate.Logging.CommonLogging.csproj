@@ -2,9 +2,9 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<LangVersion>latest</LangVersion>
 		<Nullable>disable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 
@@ -21,7 +21,7 @@
 		<PackageProjectUrl>https://github.com/mgernand/NHibernate.Logging</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/mgernand/NHibernate.Logging</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageTags>orm, logger, nhibernate</PackageTags>
+		<PackageTags>orm;logger;nhibernate</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>icon.png</PackageIcon>
@@ -34,7 +34,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Include="..\..\..\Extensions.Logging.Mock\icon.png">
+	  <None Include="..\..\icon.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
