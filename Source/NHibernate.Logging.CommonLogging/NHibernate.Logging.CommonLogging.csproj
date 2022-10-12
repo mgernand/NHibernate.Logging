@@ -11,9 +11,9 @@
 	<PropertyGroup>
 		<IncludeSymbols>false</IncludeSymbols>
 		<Copyright>Copyright © 2013-2022 Matthias Gernand. All rights reserved.</Copyright>
-		<Version>5.3.11</Version>
-		<AssemblyVersion>5.3.11</AssemblyVersion>
-		<FileVersion>5.3.11</FileVersion>
+		<Version>5.3.13</Version>
+		<AssemblyVersion>5.3.13</AssemblyVersion>
+		<FileVersion>5.3.13</FileVersion>
 		<Authors>Matthias Gernand</Authors>
 		<Description>Common.Logging logging provider for NHibernate.</Description>
 		<NeutralLanguage>en</NeutralLanguage>
@@ -46,7 +46,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="Common.Logging" Version="3.4.1" />
-	  <PackageReference Include="NHibernate" Version="5.3.11" />
+	  <PackageReference Include="NHibernate" Version="5.3.13" />
 	</ItemGroup>
 
 </Project>

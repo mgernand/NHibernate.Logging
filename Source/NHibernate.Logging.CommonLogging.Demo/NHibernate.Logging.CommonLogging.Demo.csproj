@@ -22,7 +22,7 @@
   <ItemGroup>
     <PackageReference Include="Common.Logging.NLog444" Version="3.4.1" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
-    <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.116" />
   </ItemGroup>
 
   <ItemGroup>
