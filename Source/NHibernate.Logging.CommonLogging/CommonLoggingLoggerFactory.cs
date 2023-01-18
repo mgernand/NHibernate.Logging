@@ -16,12 +16,14 @@
 	/// </summary>
 	public sealed class CommonLoggingLoggerFactory : INHibernateLoggerFactory
 	{
-		public INHibernateLogger LoggerFor(string keyName)
+        /// <inheritdoc />
+        public INHibernateLogger LoggerFor(string keyName)
 		{
 			return new CommonLoggingLogger(LogManager.GetLogger(keyName));
 		}
 
-		public INHibernateLogger LoggerFor(Type type)
+        /// <inheritdoc />
+        public INHibernateLogger LoggerFor(Type type)
 		{
 			return new CommonLoggingLogger(LogManager.GetLogger(type));
 		}

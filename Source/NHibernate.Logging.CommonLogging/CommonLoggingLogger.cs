@@ -11,12 +11,17 @@
 	{
 		private readonly ILog logger;
 
-		public CommonLoggingLogger(ILog logger)
+        /// <summary>
+        ///		Initializes a new instance of the <see cref="CommonLoggingLogger"/> type.
+        /// </summary>
+        /// <param name="logger"></param>
+        public CommonLoggingLogger(ILog logger)
 		{
 			this.logger = logger;
 		}
 
-		public bool IsEnabled(NHibernateLogLevel logLevel)
+        /// <inheritdoc />
+        public bool IsEnabled(NHibernateLogLevel logLevel)
 		{
 			switch (logLevel)
 			{
@@ -39,7 +44,8 @@
 			}
 		}
 
-		public void Log(NHibernateLogLevel logLevel, NHibernateLogValues state, Exception exception)
+        /// <inheritdoc />
+        public void Log(NHibernateLogLevel logLevel, NHibernateLogValues state, Exception exception)
 		{
 			switch (logLevel)
 			{
