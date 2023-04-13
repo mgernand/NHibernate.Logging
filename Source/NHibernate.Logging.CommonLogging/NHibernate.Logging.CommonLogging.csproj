@@ -11,9 +11,9 @@
 	<PropertyGroup>
 		<IncludeSymbols>false</IncludeSymbols>
 		<Copyright>Copyright © 2013-2023 Matthias Gernand. All rights reserved.</Copyright>
-		<Version>5.4.1</Version>
-		<AssemblyVersion>5.4.1</AssemblyVersion>
-		<FileVersion>5.4.1</FileVersion>
+		<Version>5.4.2</Version>
+		<AssemblyVersion>5.4.2</AssemblyVersion>
+		<FileVersion>5.4.2</FileVersion>
 		<Authors>Matthias Gernand</Authors>
 		<Description>Common.Logging logging provider for NHibernate.</Description>
 		<NeutralLanguage>en</NeutralLanguage>
