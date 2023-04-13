@@ -46,7 +46,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="Common.Logging" Version="3.4.1" />
-	  <PackageReference Include="NHibernate" Version="5.4.1" />
+	  <PackageReference Include="NHibernate" Version="5.4.2" />
 	</ItemGroup>
 
 </Project>
