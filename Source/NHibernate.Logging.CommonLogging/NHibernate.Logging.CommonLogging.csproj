@@ -11,9 +11,9 @@
 	<PropertyGroup>
 		<IncludeSymbols>false</IncludeSymbols>
 		<Copyright>Copyright © 2013-2023 Matthias Gernand. All rights reserved.</Copyright>
-		<Version>5.4.2</Version>
-		<AssemblyVersion>5.4.2</AssemblyVersion>
-		<FileVersion>5.4.2</FileVersion>
+		<Version>5.4.6</Version>
+		<AssemblyVersion>5.4.6</AssemblyVersion>
+		<FileVersion>5.4.6</FileVersion>
 		<Authors>Matthias Gernand</Authors>
 		<Description>Common.Logging logging provider for NHibernate.</Description>
 		<NeutralLanguage>en</NeutralLanguage>
@@ -28,25 +28,25 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Content Include="App.config.transform">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
+		<Content Include="App.config.transform">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Include="..\..\icon.png">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	  <None Include="..\..\README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
+		<None Include="..\..\icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Common.Logging" Version="3.4.1" />
-	  <PackageReference Include="NHibernate" Version="5.4.2" />
+		<PackageReference Include="Common.Logging" Version="3.4.1" />
+		<PackageReference Include="NHibernate" Version="5.4.6" />
 	</ItemGroup>
 
 </Project>
