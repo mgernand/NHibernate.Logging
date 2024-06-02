@@ -1,7 +1,7 @@
 # NHibernate Logging Providers
 
-The current version **5.5.0** is available as [NuGet package](http://nuget.org/packages/NHibernate.Logging/).
-This version is built against NHibernate 5.4.6 and Common.Logging 3.4.1.
+The current version **5.5.1** is available as [NuGet package](http://nuget.org/packages/NHibernate.Logging/).
+This version is built against NHibernate 5.5.1 and Common.Logging 3.4.1.
 
 NHibernate Logging Providers makes it possible to use your favourite logger with NHibernate. 
 You no longer have to use log4net. The new NHibernate (since NH3) logging abstraction makes 
